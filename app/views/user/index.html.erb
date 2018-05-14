@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1 {color: red}
+    h1 {font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif}
+    h1 {font-size: xx-large}
+  </style>
+  <h1 style="text-align: center"> WELCOME TO PHOTOSITE!!</h1>
+  <h2 style="color: black", style="font-size: large", align="center"> Users of photosite are: </h2>
+</head>
+<body>
+<style>
+  body {background-image: url("https://cdn.wallpapersafari.com/97/91/O4NcTo.jpg")}
+</style>
+
+<table align="center", border="1", bgcolor="#f0ffff" , style="font-size: x-large", width="500", text-align="center", height="500">
+  <tr style="font-size: large">
+    <th>User ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  <% @user.each do |user| %>
+      <tr>
+        <td style="font-size: large"><%= link_to user.id, {:action => "index", :controller => "photo", :id=>user.id} %></td>
+        <td style="font-size: large"><%= link_to user.first_name, {:action => "index", :controller => "photo", :id=>user.id}  %></td>
+        <td style="font-size: large"><%= link_to user.last_name, {:action => "index", :controller => "photo", :id=>user.id} %></td>
+      </tr>
+  <% end %>
+</table>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<style>
+  body{
+    background-color: lightcyan
+  }
+</style>
+<h1 style="font-size: large", align="center"><b>COMMENTS</b></h1>
+<% @comments.each do |comment| %>
+    <!--%= image_tag(comment.photo.file_name) %-->
+
+    <% if comment.present? then %>
+        <p><strong>Commented by:</strong><%= link_to comment.user.first_name, controller: "photo", action: "index", id: comment.user.id %><%= link_to comment.user.last_name, controller: "photo", action: "index", id: comment.user.id %></p>
+        <p><strong>Comments:</strong><%= comment.comment_text %></p>
+        <p><strong>Commented time:</strong><%= comment.date_time %></p>
+        <br>
+        <br>
+
+    <% end %>
+<% end %>
+
+
+<% if @comments.blank? then %>
+    <p align="center", style="font-size: large"><strong>NOTE: NO COMMENTS FOUND!</strong></p>
+
+
+<% end %>
+<p align="center"><b><a href="javascript:history.back()"><-- Go Back</a></b>
+

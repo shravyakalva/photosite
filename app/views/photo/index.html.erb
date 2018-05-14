@@ -1,0 +1,13 @@
+<% @user.each do |user| %>
+    <h1>Photos uploaded by<%= user.first_name %><%= user.last_name %></h1>
+<% end %>
+<% @photos.each do |photo| %>
+    <div align="center", style="background-color: lavender">
+      <%= image_tag(photo.file_name, alt: '--') %>
+      <h1 style="font-size: medium"><b>time of uploading:</b><%= photo.date_time %></h1>
+      <%= link_to 'view comments', controller: "comment", action: "index", id: photo.id %>
+    </div>
+    <br>
+    <br>
+<% end %>
+<p align="center"><b><a href="javascript:history.back()"><-- Go Back</a></b>

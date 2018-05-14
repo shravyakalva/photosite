@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2ec67ac0-8dd0-4ec4-9c15-4eeb5bc20bd0" name="shravya" url="http://18.221.252.132">
+        <fileTransfer host="18.221.252.132" port="22" privateKey="$USER_HOME$/Downloads/photosite.pem" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
